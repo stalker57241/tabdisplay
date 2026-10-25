@@ -11,7 +11,10 @@ local module = {}
 
 local function getfilename(filepath)
 	local fname
-	local prefixpos = filepath:find(prefix, 1, true)
+	local prefixpos = nil
+	if prefix ~= nil then
+		prefixpos = string.find(filepath, prefix, 1, true)
+	end	
 	if prefix == nil or prefixpos == nil or prefixpos > 1 then
 		fname = filepath:match(".*/(.-)$")
 	else
@@ -36,7 +39,7 @@ local function statusline(win)
 				tabline = tabline .. " " .. name .. " "
 			end
 		end
-		win:status(tabline, "[" .. activetab .. "/" .. tabcount .. "]")
+		win:status(tabline, "[" .. activetab + 1 .. "/" .. tabcount .. "]")
 	end
 end
 
