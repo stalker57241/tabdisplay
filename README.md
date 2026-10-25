@@ -58,8 +58,7 @@ end)
 
 # Commands
 
-- `:tab_toggle` to toggle visibility.
-  - By default disabled
+Available in [API](https://github.com/stalker57241/tabdisplay/blob/075dfd79163e36cfb31c500be22d19cec0148b0d/API.md)
 
 # Bindings
 
