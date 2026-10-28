@@ -7,7 +7,9 @@ local tabview = nil
 local activewin = nil
 local enabled = false
 local prefix = nil
-local module = {}
+local module = {
+	meta = generate_meta("tabdisplay", "1.0.0")
+}
 
 local function getfilename(filepath)
 	local fname
