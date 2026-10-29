@@ -45,15 +45,12 @@ local function statusline(win)
 	end
 end
 
-function module.setup(tabviewapi)
-	if tabviewapi == nil then return nil end
-	tabview = tabviewapi
-	return module
-end
 function module.set_prefix(prefix_)
 	prefix = prefix_
 end
-function module.init()
+function module.setup()
+	tabview = getbyname('tabview')
+	if tabview == nil then return end
 	activewin = tabview.active_window()
 	if activewin == nil then 
 		return
@@ -68,5 +65,5 @@ function module.init()
 		return true
 	end)
 end
-return module.setup
+return module
 
