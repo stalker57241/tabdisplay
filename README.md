@@ -45,6 +45,14 @@ local tabdisplay = plug.plugins.tabdisplay(tabview)
 tabdisplay.set_prefix('/')
 ```
 
+## Using `plugin_register` \[**WIP**]
+```lua
+require('plugins/plugin_register')
+local tabview = load('plugins/tabview')
+local tabdisplay = load('plugins/tabdisplay')()
+tabdisplay.set_prefix('/')
+```
+
 ## Starting plugins up
 ```lua
 vis.events.subscribe(vis.events.INIT, function()
@@ -52,7 +60,7 @@ vis.events.subscribe(vis.events.INIT, function()
 end)
 
 vis.events.subscribe(vis.events.START, function()
-  tabdisplay.init()
+  tabdisplay.setup()
 end)
 ```
 
