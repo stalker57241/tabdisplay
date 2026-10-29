@@ -32,7 +32,8 @@ plug.init(plugins, true)
 local tabview = require('plugins/tabview')
 -- Gives you plugin api only if you give it your tabview
 -- Ensure, that it isn't nil
-local tabdisplay = require('plugins/tabdisplay')(tabview)
+local tabdisplay = require('plugins/tabdisplay')
+tabdisplay.setup(tabview)
 
 -- for your path prefix to shorten path /home/user/projects/lua/proj1/init.lua to init.lua if you give `/home/user/projects/lua/proj1/`
 tabdisplay.set_prefix('/')
@@ -40,16 +41,18 @@ tabdisplay.set_prefix('/')
 ## Using `vis-plug`
 ```lua
 local tabview = plug.plugins.tabview
-local tabdisplay = plug.plugins.tabdisplay(tabview)
+local tabdisplay = plug.plugins.tabdisplay
+tabdisplay.setup(tabview)
 
 tabdisplay.set_prefix('/')
 ```
 
-## Using `plugin_register` \[**WIP**]
+## Using `plugin_register`
 ```lua
 require('plugins/plugin_register')
 local tabview = load('plugins/tabview')
-local tabdisplay = load('plugins/tabdisplay')()
+local tabdisplay = load('plugins/tabdisplay')
+tabdisplay.setup()
 tabdisplay.set_prefix('/')
 ```
 
@@ -79,5 +82,5 @@ end)
 
 # Dependencies
 
-- [tabview](https://github.com/stalker57241/tabview)
-- [plugin_register](https://github.com/stalker57241/plugin_register)
+- **[tabview](https://github.com/stalker57241/tabview) - Required**
+- *[plugin_register](https://github.com/stalker57241/plugin_register) - Optional*
