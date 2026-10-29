@@ -68,3 +68,8 @@ vis:map(vis.modes.NORMAL, "tt", function()
   vis:command('tab_toggle')
 end)
 ```
+
+# Dependencies
+
+- [tabview](https://github.com/stalker57241/tabview)
+- [plugin_register](https://github.com/stalker57241/plugin_register)
