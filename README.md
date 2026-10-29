@@ -40,7 +40,7 @@ tabdisplay.set_prefix('/')
 ## Using `vis-plug`
 ```lua
 local tabview = plug.plugins.tabview
-local tabdisplay = plug.plugins.tabdisplay(tabview) -- WON'T WORK
+local tabdisplay = plug.plugins.tabdisplay(tabview)
 
 tabdisplay.set_prefix('/')
 ```
@@ -49,7 +49,7 @@ tabdisplay.set_prefix('/')
 ```lua
 require('plugins/plugin_register')
 local tabview = load('plugins/tabview')
-local tabdisplay = load('plugins/tabdisplay')
+local tabdisplay = load('plugins/tabdisplay')()
 tabdisplay.set_prefix('/')
 ```
 
