@@ -48,8 +48,15 @@ end
 function module.set_prefix(prefix_)
 	prefix = prefix_
 end
-function module.setup()
-	tabview = getbyname('tabview')
+function module.setup(tabviewapi)
+	if tabviewapi ~= nil then
+		tabview = tabviewapi
+	else
+		tabview = getbyname('tabview')
+	end
+	return module
+end
+function module.init()
 	if tabview == nil then return end
 	activewin = tabview.active_window()
 	if activewin == nil then 
@@ -65,5 +72,4 @@ function module.setup()
 		return true
 	end)
 end
-return module
-
+return module.setup
