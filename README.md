@@ -45,7 +45,7 @@ local tabdisplay = plug.plugins.tabdisplay(tabview)
 tabdisplay.set_prefix('/')
 ```
 
-## Using `plugin_register`
+## Using `plugin_register` \[**WIP**]
 ```lua
 require('plugins/plugin_register')
 local tabview = load('plugins/tabview')
