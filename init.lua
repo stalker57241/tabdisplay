@@ -54,7 +54,7 @@ function module.setup(tabviewapi)
 	else
 		tabview = getbyname('tabview')
 	end
-	return module
+	return
 end
 function module.init()
 	if tabview == nil then return end
@@ -72,4 +72,4 @@ function module.init()
 		return true
 	end)
 end
-return module.setup
+return module
