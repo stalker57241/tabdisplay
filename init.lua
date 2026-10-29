@@ -1,6 +1,6 @@
--- [[
-
-
+--[[
+AUTHOR: stalker32021 (also known as stalker57241)
+DESCRIPTION: Frontend for tabview. Linked by plugin_register
 --]]
 local vis = _G.vis
 local tabview = nil
